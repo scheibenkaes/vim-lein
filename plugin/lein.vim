@@ -12,3 +12,5 @@ endfunction
 
 :command! Ltest :execute "!lein test"
 :command! Ldeps :execute "!lein deps"
+:command! Luber :execute "!lein uberjar"
+:command! Ljar :execute "!lein jar"
