@@ -14,3 +14,6 @@ endfunction
 :command! Ldeps :execute "!lein deps"
 :command! Luber :execute "!lein uberjar"
 :command! Ljar :execute "!lein jar"
+
+:command! Lproject :execute ":find project.clj"
+
