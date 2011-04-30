@@ -1,3 +1,15 @@
+function! Lein_def_sym()
+    let type = input("Insert n for defn, leave blank for def")
+    :call Lein_def_sym(type)
+endfunction
+
+function! Lein_def_sym(type)
+    :normal viw"ty
+    :normal {
+    :normal O
+    let snip = "def" . a:type
+    :execute "normal i" . snip . "\t\<C-T>t\t"
+endfunction
 
 function! Lein_new()
     let project_name = input("Insert project name: ")
