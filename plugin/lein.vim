@@ -8,7 +8,8 @@ function! Lein_def_sym(type)
     :normal {
     :normal O
     let snip = "def" . a:type
-    :execute ":normal i" . snip . "\t" . @t
+    :execute ":normal i" . snip . "\t" . @t 
+    :startinsert
 endfunction
 
 function! Lein_new()
