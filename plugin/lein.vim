@@ -1,4 +1,4 @@
-function! Lein_def_sym()
+function! Lein_def_sym_with_read()
     let type = input("Insert n for defn, leave blank for def")
     :call Lein_def_sym(type)
 endfunction
@@ -8,7 +8,7 @@ function! Lein_def_sym(type)
     :normal {
     :normal O
     let snip = "def" . a:type
-    :execute "normal i" . snip . "\t\<C-T>t\t"
+    :execute ":normal i" . snip . "\t" . @t
 endfunction
 
 function! Lein_new()
@@ -29,3 +29,4 @@ endfunction
 
 :command! Lproject :execute ":find project.clj"
 
+:nmap <LocalLeader>ds :call Lein_def_sym_with_read()<Return>
