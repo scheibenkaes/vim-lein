@@ -31,3 +31,5 @@ endfunction
 :command! Lproject :execute ":find project.clj"
 
 :nmap <LocalLeader>ds :call Lein_def_sym_with_read()<Return>
+
+:imap ;dd :dev-dependencies [[org.clojars.autre/lein-vimclojure "1.0.0"]]
