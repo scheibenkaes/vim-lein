@@ -21,12 +21,22 @@ function! Lein_new()
     endif
 endfunction
 
+function! Lein_restart_nailgun()
+    let sure = input("This invokes `java killall` are you sure? (y/N)")
+    if sure == "y"
+        :exe "!killall java"
+        :Lvim
+    endif
+endfunction
+
 :command! Lnew :call Lein_new()
 
 :command! Ltest :execute "!lein test"
 :command! Ldeps :execute "!lein deps"
 :command! Luber :execute "!lein uberjar"
 :command! Ljar :execute "!lein jar"
+:command! Lvim :execute "!lein vimclojure &"
+:command! Lrestartnail :call Lein_restart_nailgun()
 
 :command! Lproject :execute ":find project.clj"
 
