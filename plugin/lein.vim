@@ -33,6 +33,7 @@ endfunction
 
 :command! Lnew :call Lein_new()
 
+:command! Lclean :execute "!lein clean"
 :command! Ltest :execute "!lein test"
 :command! Ldeps :execute "!lein deps"
 :command! Luber :execute "!lein uberjar"
