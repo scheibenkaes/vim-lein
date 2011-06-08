@@ -7,6 +7,8 @@ function! Lein_def_sym(type)
     :normal viw"ty
     :normal {
     :normal O
+    :stopinsert
+    :normal o
     let snip = "def" . a:type
     :execute ":normal i" . snip . "\t" . @t 
     :startinsert
