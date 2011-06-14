@@ -40,6 +40,7 @@ endfunction
 :command! Ljar :execute "!lein jar"
 :command! Lvim :execute "!lein vimclojure &"
 :command! Lrestartnail :call Lein_restart_nailgun()
+:command! Lrun :execute "!lein run"
 
 :command! Lproject :execute ":find project.clj"
 
