@@ -41,7 +41,7 @@ endfunction
 :command! Lvim :execute "!lein vimclojure &"
 :command! Lrestartnail :call Lein_restart_nailgun()
 :command! Lrun :execute "!lein run"
-:command! Lswank :execute "!lein swank"
+:command! Lswank :execute "!lein swank &"
 
 :command! Lproject :execute ":find project.clj"
 
