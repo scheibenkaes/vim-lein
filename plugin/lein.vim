@@ -41,9 +41,12 @@ endfunction
 :command! Lvim :execute "!lein vimclojure &"
 :command! Lrestartnail :call Lein_restart_nailgun()
 :command! Lrun :execute "!lein run"
+:command! Lswank :execute "!lein swank"
 
 :command! Lproject :execute ":find project.clj"
 
 :nmap <LocalLeader>ds :call Lein_def_sym_with_read()<Return>
 
 :imap ;dd :dev-dependencies [[org.clojars.autre/lein-vimclojure "1.0.0"]]
+:imap ;ru (require '[clojure.contrib.repl-utils :as ru])
+:imap ;tr (use 'clojure.contrib.trace)
