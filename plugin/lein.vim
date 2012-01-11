@@ -47,6 +47,7 @@ endfunction
 
 :nmap <LocalLeader>ds :call Lein_def_sym_with_read()<Return>
 
-:imap ;dd :dev-dependencies [[org.clojars.autre/lein-vimclojure "1.0.0"]]
+:imap ;dd :dev-dependencies [[org.clojars.ibdknox/lein-nailgun "1.1.1"] 
+ 
 :imap ;ru (require '[clojure.contrib.repl-utils :as ru])
 :imap ;tr (use 'clojure.contrib.trace)
